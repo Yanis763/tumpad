@@ -1,0 +1,40 @@
+{
+    "name": "starter-theme",
+    "author": "Magina <dev@magina.fr>",
+    "homepage": "https://magina.fr/",
+    "private": true,
+    "repository": {
+        "type": "git",
+        "url": "git@bitbucket.org:magina_fr/starter-theme.git"
+    },
+    "bugs": {
+        "url": "https://bitbucket.org/magina_fr/starter-theme/issues"
+    },
+    "browserslist": [
+        "last 2 versions",
+        "android 4",
+        "opera 12"
+    ],
+    "scripts": {
+        "build": "mix",
+        "build:production": "mix --production",
+        "start": "mix watch",
+        "rmdist": "rimraf dist"
+    },
+    "engines": {
+        "node": ">= 6.9.4"
+    },
+    "devDependencies": {
+        "browser-sync": "^2.26.14",
+        "browser-sync-webpack-plugin": "^2.2.2",
+        "bulma": "^0.9",
+        "glob": "^7.1.6",
+        "laravel-mix": "^6.0.39",
+        "postcss": "^8.4.5",
+        "resolve-url-loader": "^3.1.0",
+        "rimraf": "^3.0.2",
+        "sass": "^1.32.5",
+        "sass-loader": "^8.0.2"
+    },
+    "dependencies": {}
+}

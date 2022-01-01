@@ -1,0 +1,24 @@
+/** CSS Easing functions */
+/* Bulma Utilities */
+#itsec-sidebar-widget-pro-upsell,
+#itsec-sidebar-widget-mail-list-signup,
+#itsec-sidebar-widget-backupbuddy-cross-promo,
+#itsec-sidebar-widget-support,
+#itsec-sidebar-widget-sync-cross-promo,
+#adminmenu a[href="admin.php?page=itsec-go-pro"] {
+  display: none !important;
+}
+
+.yoast_premium_upsell_admin_block,
+#sidebar-container.wpseo_content_cell,
+#adminmenu a[href="admin.php?page=wpseo_licenses"] {
+  display: none !important;
+}
+
+.wpseo_content_wrapper .notice p,
+.wpseo_content_wrapper .yoast-blocking-files-error p,
+.yoast .search-box,
+.yoast-alert p,
+.yoast-container .container {
+  width: auto;
+}

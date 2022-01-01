@@ -1,0 +1,13 @@
+// alias for screen-to
+@mixin media($min) {
+    @include screen-to($min) {
+        @content;
+    }
+}
+
+// alias for media-min
+@mixin media-min($min) {
+    @include screen-from($min) {
+        @content;
+    }
+}

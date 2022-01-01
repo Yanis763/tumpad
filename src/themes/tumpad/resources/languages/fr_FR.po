@@ -1,0 +1,325 @@
+# Stations Locator
+# Copyright 2014 ...
+# This file is distributed under the GNU General Public License v3 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Starter Theme\n"
+"Report-Msgid-Bugs-To: Magina <alexis@magina.fr>\n"
+"POT-Creation-Date: 2019-04-16 16:43+0200\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Magina <webmaster@magina.fr>\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Textdomain-Support: yesX-Generator: Poedit 1.6.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;esc_html_e;esc_html_x:1,2c;esc_html__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;"
+"_x:1,2c;_n:1,2;_n_noop:1,2;__ngettext:1,2;__ngettext_noop:1,2;_c,"
+"_nc:4c,1,2\n"
+"X-Poedit-Basepath: ../..\n"
+"X-Generator: Poedit 2.2.1\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: node_modules\n"
+"X-Poedit-SearchPathExcluded-1: vendor\n"
+"X-Poedit-SearchPathExcluded-2: .git\n"
+"X-Poedit-SearchPathExcluded-3: .editorconfig\n"
+"X-Poedit-SearchPathExcluded-4: .eslintrc.js\n"
+"X-Poedit-SearchPathExcluded-5: .gitignore\n"
+"X-Poedit-SearchPathExcluded-6: .php_cs\n"
+"X-Poedit-SearchPathExcluded-7: composer.json\n"
+"X-Poedit-SearchPathExcluded-8: composer.lock\n"
+"X-Poedit-SearchPathExcluded-9: package.json\n"
+"X-Poedit-SearchPathExcluded-10: package-lock.json\n"
+"X-Poedit-SearchPathExcluded-11: README.md\n"
+"X-Poedit-SearchPathExcluded-12: webpack.mix.js\n"
+
+#: resources/views/404.blade.php:8
+msgid "Sorry, but the page you were trying to view does not exist."
+msgstr "Désolé, la page que vous essayez de visiter n'existe pas."
+
+#: resources/views/index.blade.php:8 resources/views/search.blade.php:8
+msgid "Sorry, no results were found."
+msgstr "Désolé, aucun résultat trouvé."
+
+#: resources/views/partials/comments.blade.php:10
+msgctxt "comments title"
+msgid "One response to &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s responses to &ldquo;%2$s&rdquo;"
+msgstr[0] "Une réponse à &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s réponses à &ldquo;%2$s&rdquo;"
+
+#: resources/views/partials/comments.blade.php:21
+msgid "&larr; Older comments"
+msgstr "&larr; Anciens commentaires"
+
+#: resources/views/partials/comments.blade.php:24
+msgid "Newer comments &rarr;"
+msgstr "Nouveaux commentaires &rarr;"
+
+#: resources/views/partials/comments.blade.php:33
+msgid "Comments are closed."
+msgstr "Les commentaires sont fermés."
+
+#: resources/views/partials/content-page.blade.php:2
+#: resources/views/partials/content-single.blade.php:11
+msgid "Pages:"
+msgstr ""
+
+#: resources/views/partials/entry-meta.blade.php:3
+msgid "By"
+msgstr "Par"
+
+#: resources/views/partials/entry-sharer.blade.php:18
+msgid "Share:"
+msgstr "Partagez :"
+
+#: resources/views/partials/nav-social.blade.php:6
+msgid "Follow us:"
+msgstr "Suivez nous :"
+
+#: app/src/MyPostType/PostType.php:38
+msgctxt "Post Type General Name"
+msgid "MyPostTypes"
+msgstr ""
+
+#: app/src/MyPostType/PostType.php:39
+msgctxt "Post Type Singular Name"
+msgid "MyPostType"
+msgstr ""
+
+#: app/src/MyPostType/PostType.php:40 app/src/MyPostType/PostType.php:41
+msgid "MyPostTypes"
+msgstr ""
+
+#: app/src/MyPostType/PostType.php:42 app/src/MyPostType/PostType.php:43
+msgid "Archives des MyPostTypes"
+msgstr ""
+
+#: app/src/MyPostType/PostType.php:44
+msgid "MyPostType parent"
+msgstr ""
+
+#: app/src/MyPostType/PostType.php:45
+msgid "Tous les MyPostType"
+msgstr ""
+
+#: app/src/MyPostType/PostType.php:46
+msgid "Ajouter nouveau MyPostType"
+msgstr ""
+
+#: app/src/MyPostType/PostType.php:47
+msgid "Ajouter nouveau"
+msgstr ""
+
+#: app/src/MyPostType/PostType.php:48
+msgid "Ajouter MyPostType"
+msgstr ""
+
+#: app/src/MyPostType/PostType.php:49
+msgid "Éditer MyPostType"
+msgstr ""
+
+#: app/src/MyPostType/PostType.php:50
+msgid "Mettre à jour MyPostType"
+msgstr ""
+
+#: app/src/MyPostType/PostType.php:51 app/src/MyPostType/PostType.php:52
+msgid "Voir MyPostType"
+msgstr ""
+
+#: app/src/MyPostType/PostType.php:53
+msgid "Rechercher MyPostType"
+msgstr ""
+
+#: app/src/MyPostType/PostType.php:54
+msgid "Aucun MyPostType trouvé"
+msgstr ""
+
+#: app/src/MyPostType/PostType.php:55
+msgid "Pas trouvé dans la corbeille"
+msgstr ""
+
+#: app/src/MyPostType/PostType.php:56
+msgid "Vignette principale"
+msgstr ""
+
+#: app/src/MyPostType/PostType.php:57
+msgid "Choisir la vignette"
+msgstr ""
+
+#: app/src/MyPostType/PostType.php:58
+msgid "Retirer la vignette"
+msgstr ""
+
+#: app/src/MyPostType/PostType.php:59
+msgid "Utiliser comme vignette"
+msgstr ""
+
+#: app/src/MyPostType/PostType.php:60
+msgid "Insérer dans le MyPostType"
+msgstr ""
+
+#: app/src/MyPostType/PostType.php:61
+msgid "Uploaded to this item"
+msgstr ""
+
+#: app/src/MyPostType/PostType.php:62
+msgid "Items list"
+msgstr ""
+
+#: app/src/MyPostType/PostType.php:63
+msgid "Items list navigation"
+msgstr ""
+
+#: app/src/MyPostType/PostType.php:64
+msgid "Filter items list"
+msgstr ""
+
+#: app/src/MyPostType/PostType.php:67
+msgid "MyPostType"
+msgstr ""
+
+#: app/src/MyPostType/PostType.php:68
+msgid "Post Type Description"
+msgstr ""
+
+#: app/src/Settings/Fields.php:73
+msgid "Google +:"
+msgstr "Google+ :"
+
+#: app/src/Settings/Fields.php:89
+msgid "Contact"
+msgstr "Contact"
+
+#: app/src/Settings/Fields.php:94
+msgid "Contact settings"
+msgstr "Paramètres de contact"
+
+#: app/src/Settings/Fields.php:102
+msgid "Default contact infos"
+msgstr "Informations de contact par défaut"
+
+#: app/src/Settings/Fields.php:108
+msgid "Address:"
+msgstr "Adresse :"
+
+#: app/src/Settings/Fields.php:116
+msgid "PostCode:"
+msgstr "Code postal :"
+
+#: app/src/Settings/Fields.php:123
+msgid "City:"
+msgstr "Ville :"
+
+#: app/src/Settings/Fields.php:130
+msgid "E-mail:"
+msgstr "E-mail :"
+
+#: app/src/Settings/Fields.php:137
+msgid "Phone:"
+msgstr "Téléphone :"
+
+#: app/src/Settings/Fields.php:157
+msgid "Social"
+msgstr "Réseaux sociaux"
+
+#: app/src/Settings/Fields.php:162
+msgid "Social Networks settings"
+msgstr "Paramètres des réseaux sociaux"
+
+#: app/src/Settings/Fields.php:169
+msgid "Facebook:"
+msgstr "Facebook :"
+
+#: app/src/Settings/Fields.php:175
+msgid "LinkedIn:"
+msgstr "LinkedIn :"
+
+#: app/src/Settings/Fields.php:181
+msgid "Pinterest:"
+msgstr "Pinterest :"
+
+#: app/src/Settings/Fields.php:187
+msgid "Twitter:"
+msgstr "Twitter :"
+
+#: app/src/Settings/Fields.php:193
+msgid "Youtube:"
+msgstr "YouTube :"
+
+#: app/src/Settings/Hooks.php:167
+msgid "Settings: "
+msgstr "Réglages : "
+
+#: app/src/Settings/Hooks.php:174
+msgid "Global Settings"
+msgstr "Réglages principaux"
+
+#: app/src/Settings/Hooks.php:250
+#, php-format
+msgid "%s &mdash; Updated!"
+msgstr "%s &mdash; mis à jour !"
+
+#: app/src/Setup/Customizer.php:130
+msgid "Optimizations"
+msgstr "Optimisations"
+
+#: app/src/Setup/Customizer.php:141
+msgid "Activate Lazyload"
+msgstr "Activer le LazyLoad"
+
+#: app/src/Setup/Hooks.php:108
+msgid "Primary Navigation"
+msgstr "Navigation principale"
+
+#: app/src/Setup/Hooks.php:169
+msgid "Primary"
+msgstr "Principal"
+
+#: app/src/Setup/Hooks.php:173
+msgid "Footer"
+msgstr "Pied de page"
+
+#: app/src/Setup/Initializer.php:176 app/src/Setup/Initializer.php:191
+msgid "Error : Unauthorized action"
+msgstr "Erreur : Action non autorisée"
+
+#: resources/functions.php:17
+msgid "Starter theme &rsaquo; Error"
+msgstr "Starter theme &rsaquo; Erreur"
+
+#: resources/functions.php:26
+msgid "You must be using PHP 7 or greater."
+msgstr "Vous devez utiliser php 7 ou plus."
+
+#: resources/functions.php:26
+msgid "Invalid PHP version"
+msgstr "Version PHP invalide"
+
+#: resources/functions.php:33
+msgid "You must be using WordPress 4.7.0 or greater."
+msgstr "Vous devez utiliser WordPress 4.7.0 ou plus."
+
+#: resources/functions.php:33
+msgid "Invalid WordPress version"
+msgstr "Version WordPress invalide"
+
+#: resources/functions.php:42
+msgid ""
+"You must run <code>composer install</code> from the Starter theme directory."
+msgstr ""
+"Vous devez exécuter <code> composer install </code> à partir du répertoire "
+"du Starter Theme."
+
+#: resources/functions.php:43
+msgid "Autoloader not found."
+msgstr "Autoloader non trouvé."
+
+#: resources/functions.php:58
+#, php-format
+msgid "Error locating <code>%s</code> for inclusion."
+msgstr ""

@@ -1,0 +1,293 @@
+// --- Reminder - Bulma's Mixins list ---
+// arrow($color)          :	Creates a CSS-only down arrow. Used for the dropdown select.
+// block	                : Defines a margin-bottom of 1.5rem, except when the element is the last child. Used for almost all block elements.
+// clearfix               :	Adds a clearfix at the end of the element. Used for the "is-clearfix" helper.
+// center($size)          :	Positions an element in the exact center of its parent. Used for the spinner in a loading button.
+// delete                 :	Creates a CSS-only cross. Used for the delete element in modals, messages, tags...
+// fa($size, $dimensions) :	Sets the style of a Font Awesome icon container.
+// hamburger($dimensions) :	Creates a CSS-only hamburger menu with 3 bars. Used for the "nav-toggle".
+// loader                 :	Creates a CSS-only loading spinner. Used for the ".loader" element, and for input and button spinners.
+// overflow-touch         :	Sets the style of a container so that it keeps momentum when scrolling on iOS devices.
+// overlay($offset: 0)    :	Makes the element overlay its parent container, like the transparent modal background.
+// placeholder            :	Sets the styles of an input placeholder.
+// unselectable           :	Turns the element unselectable. Used for buttons to prevent selection when clicking.
+
+// mobile            : until 768px
+// tablet            : from 769px
+// tablet-only       : between 769px and 1023px
+// touch             : until 1023px
+// desktop           : from 1024px
+// desktop-only      : betwen 1024px and 1215px
+// widescreen        : from 1216px
+// widescreen-only   : between 1216px and 1407px
+// fullhd            : from 1408px
+
+// Event wrapper
+// @param {Bool} $self [false] - Whether or not to include current selector
+@mixin on-event($self: false) {
+    @if $self {
+        &,
+        &:hover,
+        &:active,
+        &:focus {
+            @content;
+        }
+    } @else {
+        &:hover,
+        &:active,
+        &:focus {
+            @content;
+        }
+    }
+}
+
+// Media Queries
+// @param {string} $size - screen size(s) (Use breakpoints on common/variables, or pass XXpx)
+@mixin screen-from($size) {
+    @media only screen and (min-width: $size) {
+        @content;
+    }
+}
+
+@mixin screen-between($from, $to) {
+    @media only screen and (min-width: $from) and (max-width: ($to)-1) {
+        @content;
+    }
+}
+
+@mixin screen-to($to) {
+    @media only screen and (max-width: ($to)-1) {
+        @content;
+    }
+}
+
+// Media Queries for screen height
+// @param {string} $size - screen size(s) (Use breakpoints on common/variables, or pass XXpx)
+@mixin screenh-from($size) {
+    @media only screen and (min-height: $size) {
+        @content;
+    }
+}
+
+@mixin screenh-between($from, $to) {
+    @media only screen and (min-height: $from) and (max-height: ($to)-1) {
+        @content;
+    }
+}
+
+@mixin screenh-to($to) {
+    @media only screen and (max-height: ($to)-1) {
+        @content;
+    }
+}
+
+// Center block
+@mixin center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// Responsive ratio
+// define ratio-size container
+// @example : @include responsive-ratio(16,9);
+// @see also : Bulma's Image : https://bulma.io/documentation/elements/image/
+@mixin responsive-ratio($x, $y, $pseudo: false) {
+    $padding: unquote(($y / $x) * 100 + "%");
+    @if $pseudo {
+        &:before {
+            @include pseudo($pos: relative);
+            width: 100%;
+            padding-top: $padding;
+        }
+    } @else {
+        padding-top: $padding;
+    }
+}
+
+// Pseudo
+// Include default declarations for Pseudo-Elements
+// @example : div::after{ @include pseudo; top:1rem; left: 1rem; }
+@mixin pseudo($display: block, $pos: absolute, $content: "") {
+    content: $content;
+    display: $display;
+    position: $pos;
+}
+
+// CSS Triangles
+// Display a customizable triangle in pure css
+// @example : @include css-triangle(blue, down, 10px, 6px, absolute, false);
+@mixin css-triangle(
+    $color,
+    $direction,
+    $width: 10px,
+    $height: 10px,
+    $position: absolute,
+    $round: false
+) {
+    @include pseudo($pos: $position);
+    width: 0;
+    height: 0;
+    @if $round {
+        border-radius: 3px;
+    }
+    @if $direction == down {
+        border-left: $width/2 solid transparent;
+        border-right: $width/2 solid transparent;
+        border-top: $height solid $color;
+    } @else if $direction == up {
+        border-left: $width/2 solid transparent;
+        border-right: $width/2 solid transparent;
+        border-bottom: $height solid $color;
+    } @else if $direction == right {
+        border-top: $height/2 solid transparent;
+        border-bottom: $height/2 solid transparent;
+        border-left: $width solid $color;
+    } @else if $direction == left {
+        border-top: $height/2 solid transparent;
+        border-bottom: $height/2 solid transparent;
+        border-right: $width solid $color;
+    }
+}
+
+// floating
+// block is floating in its parent, sets its width to 100% and max-width to $width param
+@mixin floating($width) {
+    max-width: $width;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+// floating-wpadding
+// block is floating in its parent, when window is smaller than $width, a padding $padding is added
+@mixin floating-wpadding($width: 1200px, $padding: 10px) {
+    @include floating($width);
+    @include screen-to($width + $padding * 2) {
+        padding-left: $padding;
+        padding-right: $padding;
+    }
+}
+
+// floating-wmargin
+// block is floating in its parent, when window is smaller than $width, a margin $margin is added
+@mixin floating-wmargin($width: 1200px, $margin: 10px) {
+    @include floating($width);
+    @include screen-to($width + $margin * 2) {
+        width: calc(100% - #{$margin * 2});
+        margin-left: $margin;
+        margin-right: $margin;
+    }
+}
+
+// Edge-fix
+// when navigator.sayswho is activated, classes are added to body, this is a shorthand to access edge
+@mixin Edge-fix {
+    .is-edge & {
+        @content;
+    }
+}
+
+// IE-fix
+// when navigator.sayswho is activated, classes are added to body, this is a shorthand to access this horrible outdated browser IE
+@mixin IE-fix {
+    .is-ie & {
+        @content;
+    }
+}
+
+// Microsoft-fix
+// when navigator.sayswho is activated, classes are added to body, this is a shorthand to access edge & IE (f*** you IE)
+@mixin Microsoft-fix {
+    @include Edge-fix {
+        @content;
+    }
+    @include IE-fix {
+        @content;
+    }
+}
+
+// Safari-fix
+@mixin Safari-fix {
+    .is-safari & {
+        @content;
+    }
+}
+
+// Firefox-fix
+@mixin Firefox-fix {
+    .is-firefox & {
+        @content;
+    }
+}
+
+// Chrome-fix
+@mixin Chrome-fix {
+    .is-chrome & {
+        @content;
+    }
+}
+
+
+@mixin truncate($truncation-boundary) {
+    max-width: $truncation-boundary;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+//background-color change effect on-event
+@mixin background-color-effect($color: $primary, $percentage: 15%) {
+    background-color: $color;
+    $effect: "+";
+    @if ($percentage < 0) {
+        $percentage: -1 * $percentage;
+        $effect: "-";
+    }
+
+    @include on-event {
+        @if $effect == "+" {
+            background-color: lighten($color, $percentage);
+        }
+        @if $effect == "-" {
+            background-color: darken($color, $percentage);
+        }
+    }
+}
+
+//color change effect on-event
+@mixin color-effect($color: $primary, $percentage: 15%) {
+    color: $color;
+    $effect: "+";
+    @if ($percentage < 0) {
+        $percentage: -1 * $percentage;
+        $effect: "-";
+    }
+
+    @include on-event {
+        @if $effect == "+" {
+            color: lighten($color, $percentage);
+        }
+        @if $effect == "-" {
+            color: darken($color, $percentage);
+        }
+    }
+}
+
+// Placeholder
+// Shorthand for input placeholder style
+// @example : @include placeholder{color:#000};
+@mixin placeholder {
+    &::-webkit-input-placeholder {
+        @content;
+    }
+    &:-moz-placeholder {
+        @content;
+    }
+    &::-moz-placeholder {
+        @content;
+    }
+    &:-ms-input-placeholder {
+        @content;
+    }
+}

@@ -1,0 +1,55 @@
+{
+  "name": "magina/starter-theme",
+  "type": "wordpress-theme",
+  "description": "WordPress starter theme for Magina's development team",
+  "homepage": "https://magina.fr/",
+  "authors": [
+    {
+      "name": "Arnaud Faucon",
+      "email": "arnaud.f@magina.fr"
+    }
+  ],
+  "keywords": [
+    "wordpress"
+  ],
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://satis.magina.fr/"
+    }
+  ],
+  "support": {
+    "issues": "https://bitbucket.org/magina_fr/starter-theme/issues"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/src/"
+    }
+  },
+  "require": {
+    "php": ">=7.1",
+    "composer/installers": "~1.0",
+    "symfony/var-dumper": "^4.1",
+    "magina/starter-theme-module-installer": "~1.0",
+    "magina/starter-theme-assets-module": "~1.0",
+    "magina/starter-theme-settings-module": "~1.0",
+    "magina/starter-theme-templating-module": "~1.0",
+    "magina/starter-theme-initializer-module": "~1.0",
+    "magina/starter-theme-admin-module": "~1.0",
+    "magina/starter-theme-addon-gutenberg": "^1.0"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^2.8.0"
+  },
+  "config": {
+    "http-basic": {
+      "satis.magina.fr": {
+        "username": "magina",
+        "password": "veEtJIa]RrnR:cBad?j?e+]="
+      }
+    },
+    "preferred-install": {
+      "magina/*": "dist"
+    }
+  }
+}

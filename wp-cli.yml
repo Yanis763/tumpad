@@ -1,0 +1,5 @@
+path: wp
+# "apache_modules" is only needed if you run the website on a apache webserver
+# you can comment it otherwise
+apache_modules:
+  - mod_rewrite

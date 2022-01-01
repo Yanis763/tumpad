@@ -1,0 +1,34 @@
+/* Posts sharer */
+.entry-sharer {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid $white-bis;
+    .sharer-links {
+        display: inline-block;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+            display: inline-block;
+            button, a {
+                display: block;
+                cursor: pointer;
+                width: 2rem;
+                height: 2rem;
+                background: none;
+                border-radius: 50%;
+                border: 1px solid $dark;
+                color: $dark;
+                line-height: 30px;
+                text-align: center;
+                outline: none;
+                transition: all 150ms ease-in-out;
+                @include on-event {
+                    background: $primary;
+                    border-color: $primary;
+                    color: findColorInvert($primary);
+                }
+            }
+        }
+    }
+}

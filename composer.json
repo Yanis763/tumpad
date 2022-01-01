@@ -1,0 +1,83 @@
+{
+  "name": "magina/magina-wordpress-installer",
+  "description": "Wordpress installer for Magina's development team",
+  "type": "wordpress-site",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    },
+    {
+      "type": "composer",
+      "url": "https://composer.deliciousbrains.com/0A325B52D1F54B03624F8BB8DA18F40A"
+    },
+    {
+      "type": "composer",
+      "url": "https://satis.magina.fr/"
+    },
+    {
+      "type": "composer",
+      "url": "https://private-plugins.magina.fr/"
+    }
+  ],
+  "require": {
+    "composer/installers": "~1.4",
+    "johnpbloch/wordpress": "*",
+    "magina/magina-wordpress-installer-builder": "~1.0",
+    "wpackagist-plugin/cmb2": "*",
+    "wpackagist-plugin/classic-editor": "*",
+    "wpackagist-plugin/disable-comments": "*",
+    "wpackagist-plugin/wordpress-seo": "*",
+    "wpackagist-plugin/better-wp-security": "*",
+    "wpackagist-plugin/wp-smushit": "*",
+    "deliciousbrains-plugin/wp-migrate-db-pro": "*",
+    "deliciousbrains-plugin/wp-migrate-db-pro-media-files": "*",
+    "magina/magina-cookie-notice": "*"
+  },
+  "require-dev": {
+    "wpackagist-plugin/query-monitor": "*",
+    "wpackagist-plugin/user-switching": "*"
+  },
+  "authors": [
+    {
+      "name": "Arnaud Faucon",
+      "email": "arnaud.f@magina.fr"
+    }
+  ],
+  "config": {
+    "http-basic": {
+      "satis.magina.fr": {
+        "username": "magina",
+        "password": "veEtJIa]RrnR:cBad?j?e+]="
+      },
+      "private-plugins.magina.fr": {
+        "username": "magina",
+        "password": "il7oxcpdtNOEvdN4Upfs"
+      }
+    },
+    "preferred-install": {
+      "magina/*": "dist"
+    }
+  },
+  "extra": {
+    "installer-paths": {
+      "resources/wpackagist-mu-plugins/{$name}/": [
+        "type:wordpress-muplugin"
+      ],
+      "resources/wpackagist-plugins/{$name}/": [
+        "type:wordpress-plugin"
+      ],
+      "resources/wpackagist-themes/{$name}/": [
+        "type:wordpress-theme"
+      ]
+    },
+    "wordpress-install-dir": "wp"
+  },
+  "scripts": {
+    "flush-rewrite-rules": [
+      "vendor/bin/wp rewrite flush --hard",
+      "vendor/bin/wp plugin deactivate better-wp-security",
+      "vendor/bin/wp plugin activate better-wp-security"
+    ]
+  }
+}

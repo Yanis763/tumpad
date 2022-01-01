@@ -1,0 +1,16 @@
+/.env
+/.env.production
+/.wp-salts
+/wp
+/vendor
+/resources/builds/*
+/resources/uploads/*
+!/resources/uploads/.gitkeep
+/resources/languages/*
+!/resources/languages/.gitkeep
+/resources/wpackagist-plugins/*
+!/resources/wpackagist-plugins/.gitkeep
+/resources/wpackagist-mu-plugins/*
+!/resources/wpackagist-mu-plugins/.gitkeep
+/resources/wpackagist-themes/*
+!/resources/wpackagist-themes/.gitkeep

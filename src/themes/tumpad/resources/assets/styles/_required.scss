@@ -1,0 +1,20 @@
+// This file will be included automatically by webpack
+// at the beginning of every *.compiled.scss file
+
+// !! imports here should only contains variables, mixins, functions. !!
+// (mostly what's included in the abstracts folder)
+
+// This file should not ouput any css on it's own !
+// If you need to apply a style on the site globally, please use
+// pages/app.compiled.scss as the file will be loaded in every
+// front end request
+
+// ====================================================================
+
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "abstracts/functions";
+@import "abstracts/aliases";
+
+// can be commented if you do not wish to use bulma at all
+@import "~bulma/sass/utilities/_all";

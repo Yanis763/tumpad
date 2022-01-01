@@ -1,0 +1,26 @@
+/** CSS Easing functions */
+/* Bulma Utilities */
+.login h1 {
+  background: white;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13);
+  padding: 12px;
+}
+.login h1 a {
+  background-size: contain;
+  height: 100px;
+  width: 100%;
+  margin: 0;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+.login form .input {
+  font-size: 18px;
+  padding: 3px 8px;
+}
+.login p.message {
+  font-size: 0.75rem;
+  background: white;
+  border-radius: 0;
+  margin: 10px 0 -10px 0;
+}

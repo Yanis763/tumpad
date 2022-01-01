@@ -1,0 +1,70 @@
+// Define all scss variables here.
+// you can override bulma's variables as well
+
+// Colors - Elements
+$primary: #00617a;
+
+// Social Colors
+$facebook: #3b5998;
+$facebook-invert: #fff;
+$googleplus: #dd4b39;
+$googleplus-invert: #fff;
+$linkedin: #0077b5;
+$linkedin-invert: #fff;
+$pinterest: #bd081c;
+$pinterest-invert: #fff;
+$twitter: #1da1f2;
+$twitter-invert: #fff;
+$youtube: #f00;
+$youtube-invert: #fff;
+
+$social-colors: (
+    "facebook": (
+        $facebook,
+        $facebook-invert,
+    ),
+    "googleplus": (
+        $googleplus,
+        $googleplus-invert,
+    ),
+    "linkedin": (
+        $linkedin,
+        $linkedin-invert,
+    ),
+    "pinterest": (
+        $pinterest,
+        $pinterest-invert,
+    ),
+    "twitter": (
+        $twitter,
+        $twitter-invert,
+    ),
+    "youtube": (
+        $youtube,
+        $youtube-invert,
+    ),
+);
+
+// Map new colors to Bulma
+// Allow us to use default classes '.has-text-{color}' & '.has-background-{color}'
+// @see https://bulma.io/documentation/modifiers/color-helpers/
+// Beware that this also generates classes modifiers for all components and elements
+// that uses the $colors array to generate colors for its components.
+// (it can grow your compiled css exponentially)
+$custom-colors: ();
+$custom-shades: ();
+
+// Reponsive breakpoints
+$gap: 64px; // The container horizontal gap, which acts as the offset for breakpoints
+$tablet: 769px;
+$desktop: 960px + (2 * $gap);
+$widescreen: 1152px + (2 * $gap);
+$widescreen-enabled: true;
+$fullhd: 1344px + (2 * $gap);
+$fullhd-enabled: true;
+
+// Box Model
+$spacer: 2rem;
+
+// Animation Easings
+@import "easings";

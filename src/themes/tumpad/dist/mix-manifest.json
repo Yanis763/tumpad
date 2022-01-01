@@ -1,0 +1,11 @@
+{
+    "images/.gitkeep": "images/.gitkeep?id=d41d8cd98f00b204e980",
+    "scripts/pages-admin/admin.compiled.js": "scripts/pages-admin/admin.compiled.js?id=0c13b691087b16def669",
+    "scripts/pages-admin/login.compiled.js": "scripts/pages-admin/login.compiled.js?id=d3b4ebc92ceb364520eb",
+    "scripts/pages/app.compiled.js": "scripts/pages/app.compiled.js?id=a65bdfd7be86795999a6",
+    "scripts/pages/home.compiled.js": "scripts/pages/home.compiled.js?id=8a9014da08e24245ef40",
+    "styles/pages-admin/admin.compiled.css": "styles/pages-admin/admin.compiled.css?id=6f857ca45b0cf41897c4",
+    "styles/pages-admin/login.compiled.css": "styles/pages-admin/login.compiled.css?id=ad903aa37625e6c1a630",
+    "styles/pages/app.compiled.css": "styles/pages/app.compiled.css?id=af6128e1aeb4debfdddd",
+    "styles/pages/home.compiled.css": "styles/pages/home.compiled.css?id=6a0639477e33c60e898f"
+}
